@@ -1,0 +1,49 @@
+# Applications
+alt - b : open -n "/Applications/Google Chrome.app"
+
+# resize
+alt - 0x2B : yabai -m window --resize left:-40:0 \
+    || yabai -m window --resize right:-40:0
+alt - 0x2F : yabai -m window --resize right:40:0 \
+    || yabai -m window --resize left:40:0
+
+# close
+alt - q : yabai -m window --close
+
+# window navigate
+alt + rshift - h : yabai -m window --focus stack.prev \
+    || yabai -m window --focus prev
+alt + rshift - l : yabai -m window --focus stack.next \
+    || yabai -m window --focus next
+
+# mirror
+alt + rshift - m : yabai -m space --mirror y-axis \
+    && yabai -m window --focus first
+
+# warp
+alt + rshift - j : yabai -m window --warp prev
+alt + rshift - k : yabai -m window --warp next
+
+# rotate
+alt + rshift - r : yabai -m space --rotate 270
+
+# full screen
+alt + rshift - return: yabai -m window --toggle zoom-fullscreen
+
+#display navigate
+alt + lshift - h : yabai -m display --focus prev \
+    && yabai -m display --focus stack.prev
+alt + lshift - l: yabai -m display --focus next \
+    && yabai -m display --focus stack.next
+
+# send window
+alt + lshift - 0x2B : yabai -m window --display prev \
+    && yabai -m display --focus prev
+alt + lshift - 0x2F : yabai -m window --display next \
+    && yabai -m display --focus next
+
+# toggle mission control
+alt + shift - m : yabai -m space --toggle mission-control
+
+# reset split balance
+alt + shift - e : yabai -m space --balance

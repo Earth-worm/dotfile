@@ -10,5 +10,11 @@ if [ ! -d ~/dotfiles ]; then
   cd ~
   git clone https://github.com/Earth-worm/dotfiles.git
 fi
-
 brew bundle -v --file=~/dotfiles/Brewfile
+
+if [ ! -d ~/.config ]; then
+  cd ~
+  mkdir ~/.config
+fi
+
+stow -v -d ~/dotfiles/packages -t ~ yabai starship fish karabiner nvim skhd
