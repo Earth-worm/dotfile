@@ -18,3 +18,5 @@ if [ ! -d ~/.config ]; then
 fi
 
 stow -v -d ~/dotfiles/packages -t ~ yabai starship fish karabiner nvim skhd
+
+defaults write com.apple.desktopservices DSDontWriteNetworkStores True
