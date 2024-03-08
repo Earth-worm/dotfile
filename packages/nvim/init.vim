@@ -6,7 +6,7 @@ set noswapfile "swapファイルを作らない
 set binary noeol "ファイルの終わりに改行しない
 set autoindent
 set tabstop=2
-set shiftwidth=2
+set shiftwidth=4
 set expandtab
 set splitright
 set clipboard=unnamed
@@ -17,6 +17,10 @@ set cursorline "カーソルのラインを強調
 colorscheme molokai
 
 call plug#begin()
+"fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'jiangmiao/auto-pairs' "（の閉じも一緒に作成
 Plug 'vim-airline/vim-airline' "theme
@@ -25,6 +29,10 @@ Plug 'morhetz/gruvbox' "theme
 Plug 'preservim/nerdtree'
 "Plug 'mattn/vim-goimports' "format
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+"Python
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+
 
 "JS
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }

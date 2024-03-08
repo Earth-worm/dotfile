@@ -31,15 +31,15 @@ alt + rshift - r : yabai -m space --rotate 270
 alt + rshift - return: yabai -m window --toggle zoom-fullscreen
 
 #display navigate
-alt + lshift - h : yabai -m display --focus prev \
+alt + lshift - m : yabai -m display --focus prev \
     && yabai -m display --focus stack.prev
-alt + lshift - l: yabai -m display --focus next \
+alt + lshift - l : yabai -m display --focus next \
     && yabai -m display --focus stack.next
 
 # send window
-alt + lshift - 0x2B : yabai -m window --display prev \
+alt + lshift - 0x2F : yabai -m window --display prev \
     && yabai -m display --focus prev
-alt + lshift - 0x2F : yabai -m window --display next \
+alt + lshift - 0x2B : yabai -m window --display next \
     && yabai -m display --focus next
 
 # toggle mission control

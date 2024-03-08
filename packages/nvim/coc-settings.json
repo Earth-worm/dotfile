@@ -1,9 +1,38 @@
 {
   "coc.preferences.jumpCommand": "split",
-  "coc.preferences.formatOnSaveFiletypes": ["terraform","cpp"],
+  "coc.preferences.hoverTarget": "float",
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "terraform",
+    "cpp",
+    "python",
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact"
+  ],
+
   "rust-analyzer.cargo.loadOutDirsFromCheck": true,
   "rust-analyzer.procMacro.enable": true,
   "rust-analyzer.enable": true,
+
+  "suggest.triggerAfterInsertEnter": true,
+  "suggest.noselect": false,
+  "suggest.minTriggerInputLength": 2,
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+  "suggest.snippetIndicator": " ►",
+  "suggest.enablePreview": true,
+
+  "tsserver.enable": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "vue"
+  ],
+  "javascript.suggestionActions.enabled": false,
   "languageserver": {
     "go": {
       "command": "gopls",
@@ -30,11 +59,6 @@
       "initializationOptions": {},
       "settings": {}
     },
-    "graphql": {
-      "command": "graphql-lsp",
-      "args": ["server", "-m", "stream"],
-      "filetypes": ["typescript", "typescriptreact", "graphql"]
-    },
     "kotlin": {
       "command": "~/lsp/kotlin/server/bin/kotlin-language-server",
       "filetypes": ["kotlin"]
@@ -54,6 +78,11 @@
       "initializationOptions": {},
       "settings": {}
 	  },
+    "jedi":{
+      "enable":true,
+      "startupMessage":false,
+      "executable.command":"/opt/homebrew/bin/jedi-language-server"
+    }
   },
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd"
 }
